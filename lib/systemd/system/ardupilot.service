@@ -1,0 +1,11 @@
+[Unit]
+Description=APM autopilot launch service
+After=lightdm.service
+
+[Service]
+#Type=oneshot
+ExecStart=/home/pi/ardupilot/bin/picontrolserver.sh
+
+[Install]
+WantedBy=multi-user.target
+
