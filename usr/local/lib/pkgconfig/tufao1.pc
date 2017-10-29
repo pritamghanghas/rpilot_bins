@@ -1,0 +1,12 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/tufao-1
+
+Name: tufao
+Description: An asynchronous web framework for C++ built on top of Qt
+URL: https://github.com/vinipsmaker/tufao
+Version: 1.3.9
+Requires: Qt5Core Qt5Network
+Libs: -L${libdir} -ltufao1
+Cflags: -I${includedir}

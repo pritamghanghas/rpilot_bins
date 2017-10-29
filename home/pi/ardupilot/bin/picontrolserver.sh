@@ -41,12 +41,14 @@ cd -
 
 
 AP_BIN_DIR="/home/pi/ardupilot/bin/"
+export LD_LIBRARY_PATH=/usr/local/lib/
+export mavproxy=1
+export picam=1
+export hostapd=1
+export beacon_interval=4000
+export unique_id=`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
 date
 while :; do
-	 export LD_LIBRARY_PATH=/usr/local/lib/
-	 export mavproxy=1
-	 export picam=1
-	 export hostapd=1
          cd $AP_BIN_DIR 
          $AP_BIN_DIR/picontrolserver
          cd -
